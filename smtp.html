@@ -1,0 +1,281 @@
+
+		<!DOCTYPE html>
+		<html lang="en-US">
+		<head>
+			<meta name="viewport" content="width=device-width"/>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+			<title>WP Mail SMTP &rsaquo; Setup Wizard</title>
+			<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='stylesheet' href='http://localhost/wordpress/wp-admin/load-styles.php?c=1&amp;dir=ltr&amp;load%5Bchunk_0%5D=dashicons,admin-bar&amp;ver=6.9.4' type="text/css" media='all' />
+<link rel='stylesheet' id='wp-mail-smtp-vue-style-css' href='http://localhost/wordpress/wp-content/plugins/wp-mail-smtp/assets/vue/css/wizard.min.css?ver=4.7.1' media='all' />
+<link rel='stylesheet' id='woocommerce-activation-css' href='http://localhost/wordpress/wp-content/plugins/woocommerce/assets/css/activation.css?ver=10.6.2' media='all' />
+<style class='wp-fonts-local'>
+@font-face{font-family:Inter;font-style:normal;font-weight:300 900;font-display:fallback;src:url('http://localhost/wordpress/wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Cardo;font-style:normal;font-weight:400;font-display:fallback;src:url('http://localhost/wordpress/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');}
+</style>
+			
+<script type='text/javascript'>
+/* <![CDATA[ */
+var userSettings = {"url":"/wordpress/","uid":"1","time":"1776319289","secure":""};
+//# sourceURL=js-inline-concat-wp-hooks%2Cjquery-core%2Cjquery-migrate%2Cutils
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://localhost/wordpress/wp-admin/load-scripts.php?c=1&amp;load%5Bchunk_0%5D=wp-hooks,jquery-core,jquery-migrate,utils&amp;ver=6.9.4'></script>
+<script src="https://stats.wp.com/w.js?ver=202616" id="woo-tracks-js"></script>
+			<style>
+				#wpadminbar .quicklinks #wp-admin-bar-woocommerce-site-visibility-badge {
+					padding: 7px 0;
+				}
+
+				#wpadminbar .quicklinks #wp-admin-bar-woocommerce-site-visibility-badge a.ab-item {
+					/* Layout  */
+					background-color: #F6F7F7;
+					border-radius: 2px;
+					display: flex;
+					height: 18px;
+					padding: 0px 6px;
+					align-items: center;
+					gap: 8px;
+
+					/* Typography  */
+					color: #3C434A;
+					font-size: 12px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 16px;
+				}
+
+				#wpadminbar .quicklinks #wp-admin-bar-woocommerce-site-visibility-badge a.ab-item:hover,
+				#wpadminbar .quicklinks #wp-admin-bar-woocommerce-site-visibility-badge a.ab-item:focus {
+					background-color: #DCDCDE;
+				}
+
+				#wpadminbar .quicklinks #wp-admin-bar-woocommerce-site-visibility-badge a.ab-item:focus {
+					outline: var(--wp-admin-border-width-focus) solid var(--wp-admin-theme-color-darker-20);
+				}
+
+				#wpadminbar .quicklinks #wp-admin-bar-woocommerce-site-visibility-badge.woocommerce-site-status-badge-live a.ab-item {
+					background-color: #E6F2E8;
+					color: #00450C;
+				}
+
+				#wpadminbar .quicklinks #wp-admin-bar-woocommerce-site-visibility-badge.woocommerce-site-status-badge-live a.ab-item:hover,
+				#wpadminbar .quicklinks #wp-admin-bar-woocommerce-site-visibility-badge.woocommerce-site-status-badge-live a.ab-item:focus {
+					background-color: #B8E6BF;
+				}
+			</style><style>a.wp-mail-smtp-sidebar-upgrade-pro { background-color: #00a32a !important; color: #fff !important; font-weight: 600 !important; }</style><script type="text/javascript">var _wpColorScheme = {"icons":{"base":"#ece6f6","focus":"#fff","current":"#fff"}};</script>
+	<link id="wp-admin-canonical" rel="canonical" href="http://localhost/wordpress/wp-admin/admin.php?page=wp-mail-smtp-setup-wizard" />
+	<script>
+		if ( window.history.replaceState ) {
+			window.history.replaceState( null, null, document.getElementById( 'wp-admin-canonical' ).href + window.location.hash );
+		}
+	</script>
+	<link rel="icon" href="http://localhost/wordpress/wp-content/uploads/2026/03/images-1.jpg" sizes="32x32" />
+<link rel="icon" href="http://localhost/wordpress/wp-content/uploads/2026/03/images-1.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="http://localhost/wordpress/wp-content/uploads/2026/03/images-1.jpg" />
+<meta name="msapplication-TileImage" content="http://localhost/wordpress/wp-content/uploads/2026/03/images-1.jpg" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">		</head>
+		<body class="wp-mail-smtp-setup-wizard">
+				<style type="text/css">
+			#wp-mail-smtp-settings-area {
+				visibility: hidden;
+				animation: loadWpMailSMTPSettingsNoJSView 0s 2s forwards;
+			}
+
+			@keyframes loadWpMailSMTPSettingsNoJSView{
+				to { visibility: visible; }
+			}
+
+			body {
+				background: #F1F1F1;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+				margin: 0;
+			}
+
+			#wp-mail-smtp-settings-area .wp-mail-smtp-setup-wizard-header {
+				text-align: center;
+				border-top: 4px solid #E27730;
+			}
+
+			#wp-mail-smtp-settings-area .wp-mail-smtp-setup-wizard-header h1 {
+				margin: 0;
+			}
+
+			#wp-mail-smtp-settings-area .wp-mail-smtp-logo {
+				display: inline-block;
+				width: 320px;
+				margin-top: 10px;
+				padding: 0 10px;
+			}
+
+			#wp-mail-smtp-settings-area .wp-mail-smtp-logo img {
+				width: 100%;
+				height: 100%;
+			}
+
+			#wp-mail-smtp-settings-error-loading-area {
+				box-sizing: border-box;
+				max-width: 90%;
+				width: auto;
+				margin: 0 auto;
+				background: #fff;
+				border: 1px solid #DDDDDD;
+				border-radius: 6px;
+				-webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+				box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+				padding: 20px 30px;
+			}
+
+			#wp-mail-smtp-settings-area .wp-mail-smtp-error-footer {
+				text-align: center;
+				margin-top: 20px;
+				font-size: 14px;
+			}
+
+			#wp-mail-smtp-settings-area .wp-mail-smtp-error-footer a {
+				color: #999999;
+			}
+
+			#wp-mail-smtp-error-js h3 {
+				font-size: 24px;
+				font-weight: 500;
+				line-height: 23px;
+				margin: 0 0 15px;
+				color: #444444;
+			}
+
+			#wp-mail-smtp-error-js p.info,
+			#wp-mail-smtp-error-js ul.info {
+				color: #777777;
+				font-size: 16px;
+				line-height: 23px;
+				margin: 0 0 10px;
+			}
+
+			#wp-mail-smtp-error-js ul.info {
+				margin: -10px 0 20px;
+			}
+
+			#wp-mail-smtp-error-js a.button {
+				display: inline-block;
+				background-color: #E27730;
+				color: #ffffff;
+				line-height: 22px;
+				font-size: 16px;
+				padding: 14px 30px;
+				font-weight: 500;
+				border-radius: 3px;
+				border: none;
+				cursor: pointer;
+				text-decoration: none;
+				margin-top: 7px;
+			}
+
+			#wp-mail-smtp-error-js a.button:hover {
+				background-color: #c45e1b;
+			}
+
+			#wp-mail-smtp-error-js .medium-bold {
+				font-weight: 500;
+			}
+
+			#wp-mail-smtp-nojs-error-message > div {
+				border: 1px solid #DDDDDD;
+				border-left: 4px solid #DC3232;
+				color: #777777;
+				font-size: 14px;
+				padding: 18px 18px 18px 21px;
+				font-weight: 300;
+				text-align: left;
+			}
+
+			@media (min-width: 782px) {
+				#wp-mail-smtp-settings-area .wp-mail-smtp-logo {
+					margin-top: 50px;
+					padding: 0;
+				}
+
+				#wp-mail-smtp-settings-error-loading-area {
+					width: 650px;
+					margin-top: 40px;
+					padding: 52px 67px 49px;
+				}
+
+				#wp-mail-smtp-settings-area .wp-mail-smtp-error-footer {
+					margin-top: 50px;
+				}
+
+				#wp-mail-smtp-error-js p.info {
+					margin: 0 0 20px;
+				}
+			}
+		</style>
+		<!--[if IE]>
+		<style>
+			#wp-mail-smtp-settings-area{
+				visibility: visible !important;
+			}
+		</style>
+		<![endif]-->
+		<div id="wp-mail-smtp-vue-setup-wizard">
+			<div id="wp-mail-smtp-settings-area" class="wp-mail-smtp-settings-area wpms-container">
+				<header class="wp-mail-smtp-setup-wizard-header">
+					<h1 class="wp-mail-smtp-setup-wizard-logo">
+						<div class="wp-mail-smtp-logo">
+							<img src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDIgNjAiPjxkZWZzPjxzdHlsZT4uY2xzLTExLC5jbHMtMTJ7ZmlsbC1ydWxlOmV2ZW5vZGR9LmNscy00e2ZpbGw6bm9uZX0uY2xzLTExe2ZpbGw6Izg2YTE5Nn0uY2xzLTEye2ZpbGw6I2ZmZn08L3N0eWxlPjwvZGVmcz48cGF0aCBkPSJNNjkuMDYgMTEuMTFMNjQuNyAyMy40OWgtLjA2bC0xLjg5LTYuNTUtMi02LjE0aC0zLjEzdi40NGw2IDE3Ljg5aDEuNjZsNC4zOS0xMS42N2guMDZsNC4zOSAxMS42N2gxLjU2bDYuMDYtMTcuODl2LS40NGgtMy4ybC0xLjkyIDYuMTQtMS44MiA2LjUyaC0uMDZsLTQuMzItMTIuMzV6TTg3LjY4IDI5aC0zVjEwLjhoNy41NGE2LjE3IDYuMTcgMCAwMTYuNDIgNi40MiA2LjE0IDYuMTQgMCAwMS02LjQyIDYuMzJoLTQuNXptLS4wNS04LjExaDQuNTVhMy41NCAzLjU0IDAgMDAzLjUxLTMuNzUgMy40OSAzLjQ5IDAgMDAtMy41MS0zLjcxaC00LjU1em0yOS0uNzNsLTcuNDEtOS40MWgtMS4xMVYyOWgzVjE3LjYxbDUuMjggNi43NGguNDFsNS4yNS02Ljc0VjI5aDMuMDVWMTAuNzVIMTI0em0yNC4xMS0yLjc4djcuODhjMCAxLjE0IDAgMS44NyAxLjM1IDEuNzR2MS45MmMtMS44LjM0LTMuNjQuMTMtMy42NC0ydi0uNTJhNC41NyA0LjU3IDAgMDEtNC4zMiAyLjczYy0zLjgyIDAtNS42Ny0zLjA3LTUuNjctNi42LjA4LTQuMTYgMy4wNS02LjQ1IDcuMTMtNi4zN2ExMi42MiAxMi42MiAwIDAxNS4xNiAxLjIyek0xMzggMjIuNzFWMTlhNi40OSA2LjQ5IDAgMDAtMi42My0uNTJjLTIuMzkgMC00IDEuMzctNC4wOCA0LjA4IDAgMi4yOSAxLjEyIDQuMDggMy40MyA0LjA4IDIuMTMuMDIgMy4yMi0xLjY0IDMuMjgtMy45M3ptNi41Ny0xMC4xMmExLjY1IDEuNjUgMCAwMDEuNzUgMS42OSAxLjYxIDEuNjEgMCAwMDEuNjgtMS42OSAxLjcxIDEuNzEgMCAwMC0zLjQxIDB6bTMuMTIgNGgtMi44M1YyOWgyLjgzek0xNTEuMyAxMHYxNC41M2MwIDQuMTggMS43NyA1LjE3IDUuNjIgNC41NWwtLjExLTIuMTljLTIuMTUuMzQtMi43LS4zMS0yLjctMi4zOVYxMHptMTMuNDcgMTMuODZjLjA4IDMuODIgMy44IDUuNTkgNy4zNiA1LjUxIDMuNCAwIDcuMTctMS41MSA3LjE3LTUuNTEgMC00LjE5LTMuMzgtNC45Mi03LjA3LTUuMzMtMi4xLS4yOS00LjE2LS41NS00LjE2LTIuNnMyLjE2LTIuNzMgMy44Mi0yLjczIDMuODUuNjIgNCAyLjU3aDIuODZjLS4wOC0zLjcyLTMuMzUtNS4yOC02LjgxLTUuMjhzLTYuODQgMS43Ny02Ljg0IDUuNTEgMy4zIDQuNzEgNi42MyA1YzIuMTEuMiA0LjU4LjQ0IDQuNTggMi44M3MtMi4yOSAyLjgzLTQuMjEgMi44My00LjIyLS43NS00LjM1LTIuOHptMjYuNDQtMy42N2wtNy40MS05LjQxaC0xLjEyVjI5aDNWMTcuNjFsNS4zMiA2Ljc0aC40Mmw1LjI1LTYuNzRWMjloM1YxMC43NWgtMS4wN3ptMTYuNTQtNi42OFYyOWgzVjEzLjQ4SDIxNlYxMC44aC0xMy41M3YyLjY4em0xNCAxNS41MmgtM1YxMC44aDcuNTRhNi4xNyA2LjE3IDAgMDE2LjQyIDYuNDIgNi4xNCA2LjE0IDAgMDEtNi40MiA2LjMyaC00LjV6bTAtOC4xMWg0LjU1YTMuNTQgMy41NCAwIDAwMy41MS0zLjc1IDMuNDkgMy40OSAwIDAwLTMuNTEtMy43MWgtNC41NXoiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZmlsbD0iIzIzMjgyYyIvPjxwYXRoIGQ9Ik05NC4xOCAzOC4wOWEuNDYuNDYgMCAwMS4wOS4xOSAxLjE1IDEuMTUgMCAwMTAgLjJ2LjE4YTEuMzMgMS4zMyAwIDAxLS4wOC4yNCAxLjA5IDEuMDkgMCAwMS0uMjEuMzcuNTguNTggMCAwMS0uNDYgMCAuMy4zIDAgMDAtLjE3IDAgMS41OSAxLjU5IDAgMDAtLjM0LS4wNmgtLjM1YTEuNyAxLjcgMCAwMC0uNTUuMDggMS4xMiAxLjEyIDAgMDAtLjQ3LjI5IDEuNzIgMS43MiAwIDAwLS4zNC42IDMuMzQgMy4zNCAwIDAwLS4xNiAxdjEuMTNoMi4xcTAgLjM5LS4wNi42M2EyLjEgMi4xIDAgMDEtLjEuNC42MS42MSAwIDAxLS4xNS4yMiAxLjI2IDEuMjYgMCAwMS0uMjMuMTNoLS4yM2E1LjM1IDUuMzUgMCAwMS0uNjEgMGgtLjc1djcuMTFhMS4xMiAxLjEyIDAgMDEwIC4yNC4yNS4yNSAwIDAxLS4yLjIxIDYuMDggNi4wOCAwIDAxLS42Ni4wN2gtLjUzYTMuMTUgMy4xNSAwIDAxLS42MS0uMDYgMS40IDEuNCAwIDAxMC0uMjNWNDMuN2EyLjE5IDIuMTkgMCAwMS0xLjE3LS4zMWMwLS4xOSAwLS4zNS4wOC0uNDZhLjY5LjY5IDAgMDEuMS0uMjcuNjEuNjEgMCAwMS4xNy0uMTUuODYuODYgMCAwMS4yNS0uMWwuMjItLjA2LjM1LS4wN3YtLjczYTYuMjYgNi4yNiAwIDAxLjA2LS42NSAzLjc5IDMuNzkgMCAwMS40My0xLjYxIDMuMTYgMy4xNiAwIDAxLjg1LTEgMy4yNCAzLjI0IDAgMDExLjA5LS40OSA0LjQgNC40IDAgMDExLjEtLjE1IDMuMiAzLjIgMCAwMTEgLjEzIDEuMzYgMS4zNiAwIDAxLjUzLjI3em05LjgyIDUuNjhhMi4wOCAyLjA4IDAgMDAtLjcxLjEyIDEuNjUgMS42NSAwIDAwLS41OS4zOHY2YTIuNTQgMi41NCAwIDAxMCAuNDEuOTEuOTEgMCAwMS0uMTYuMzcgMS4wNSAxLjA1IDAgMDEtLjI0LjE1IDEuMyAxLjMgMCAwMS0uMzMuMDZoLTEuMjd2LTdhMy44OCAzLjg4IDAgMDAtLjA3LS44MSA0LjczIDQuNzMgMCAwMC0uMTgtLjYzIDEuNjYgMS42NiAwIDAxLjMxLS4yMyAzLjY2IDMuNjYgMCAwMS41Mi0uMjUuNTYuNTYgMCAwMS4xNSAwaC4xMmEuODkuODkgMCAwMS40NS4wOS43Ni43NiAwIDAxLjI0LjMgMy41NyAzLjU3IDAgMDEuNTYtLjMzYy4yLS4wOS4zOS0uMTcuNTctLjIzYTMgMyAwIDAxLjU1LS4xNCAxLjUxIDEuNTEgMCAwMS41NiAwYy41OC4wNi45LjI0IDEgLjUzYTIuODkgMi44OSAwIDAxLS4wNy41NyAxLjQ2IDEuNDYgMCAwMS0uMjcuNjRoLS44N2EuNTYuNTYgMCAwMC0uMTUgMHptNy45MSA3LjU2aC0xLjY3di01Ljg5YTMuMiAzLjIgMCAwMC0uMjQtMS40Ny45LjkgMCAwMC0uODYtLjQzIDEuNjcgMS42NyAwIDAwLS44LjIgMi40MSAyLjQxIDAgMDAtLjYzLjQ5djYuMTRhMi4zNyAyLjM3IDAgMDEwIC40MS42NC42NCAwIDAxLS40My40NyAxLjk0IDEuOTQgMCAwMS0uMzIuMDcgMy4yOCAzLjI4IDAgMDEtLjQ5IDBoLS43NnYtNy4wMWEzLjk0IDMuOTQgMCAwMC0uMDctLjgxIDQuODIgNC44MiAwIDAwLS4xNi0uNjMgMi4yMyAyLjIzIDAgMDEuODMtLjQ4LjU2LjU2IDAgMDEuMTUgMGguMDlhLjguOCAwIDAxLjQ1LjEzLjg2Ljg2IDAgMDEuMjYuMjggNC4zOSA0LjM5IDAgMDExLjE0LS41OCAzLjg0IDMuODQgMCAwMTEuMjQtLjE5aC4zOWEyLjcgMi43IDAgMDExIC4yNyAyLjI2IDIuMjYgMCAwMS42OC41MyAyLjU4IDIuNTggMCAwMS42MS0uMzZjLjIzLS4xLjQ0LS4xOS42My0uMjVhMy42NSAzLjY1IDAgMDExLjIxLS4xOWguNGEyLjkxIDIuOTEgMCAwMTEuMTIuMyAxLjkgMS45IDAgMDEuNjkuNjkgMyAzIDAgMDEuMzQgMSA3Ljc0IDcuNzQgMCAwMS4xIDEuMzN2NS42OWExIDEgMCAwMS0uMjUuMTYgMS40IDEuNCAwIDAxLS4zNS4wOGgtMS4zYTMuMDUgMy4wNSAwIDAxLS4xMy0uMzIgMS42MSAxLjYxIDAgMDEwLS4zOXYtNS4xMWEzLjQ1IDMuNDUgMCAwMC0uMjMtMS40OC44OS44OSAwIDAwLS44NS0uNDIgMS42NCAxLjY0IDAgMDAtLjgxLjIyIDMuNDggMy40OCAwIDAwLS42Ny41M2wuMDYtLjA2djYuNjhjLjAzLjItLjEuMzQtLjM1LjR6TTEyMC42IDQyaC41NmEzLjA1IDMuMDUgMCAwMTEuMzYuMzZjLjI5LjE5LjQ2LjM2LjUuNWExLjI5IDEuMjkgMCAwMS0uMTIuNDggMi42MSAyLjYxIDAgMDEtLjI3LjVoLS4xOGEuODguODggMCAwMS0uMiAwIDMgMyAwIDAwLS4zMi0uMDYgMS41OCAxLjU4IDAgMDEtLjMxLS4wOSAyLjMyIDIuMzIgMCAwMC0uODctLjE3IDEuMTUgMS4xNSAwIDAwLS43OS4yNS43Ny43NyAwIDAwLS4zLjYzIDEgMSAwIDAwLjEuNDQgMS41NCAxLjU0IDAgMDAuNDIuNDZsLjM2LjI3LjQ0LjMxLjU3LjQyLjU1LjRhMy42MyAzLjYzIDAgMDEuOSAxIDIuMjggMi4yOCAwIDAxLjI4IDEuMTNBMi42NSAyLjY1IDAgMDExMjMgNTBhMi41NyAyLjU3IDAgMDEtLjcyLjg1IDMuMTkgMy4xOSAwIDAxLTEuMDguNTIgNC41OSA0LjU5IDAgMDEtMS4zLjE3IDQuNzEgNC43MSAwIDAxLTEuNjYtLjI2IDEuMzggMS4zOCAwIDAxLS44OS0uNjYgMS41NyAxLjU3IDAgMDEuMS0uNTEgMS44NiAxLjg2IDAgMDEuMjgtLjUyaC4yN2ExLjIxIDEuMjEgMCAwMS41OC4xNyAzLjkzIDMuOTMgMCAwMC42Ni4yMiAyLjg2IDIuODYgMCAwMC43LjA5aC4zNGExIDEgMCAwMC42OS0uMzIgMSAxIDAgMDAuMjQtLjcyIDEuMTYgMS4xNiAwIDAwLS4xNy0uNiAxLjgzIDEuODMgMCAwMC0uNTYtLjU1bC0uMTctLjExYy0uMDctLjA1LS4wOS0uMDctLjA2IDAtLjIyLS4xNi0uNDUtLjMyLS42OS0uNTFsLS42Mi0uNTEtLjQ4LS4zOGEyLjYyIDIuNjIgMCAwMS0uODgtMS44NiAyLjExIDIuMTEgMCAwMS44NC0xLjc5IDMuNjYgMy42NiAwIDAxMi4xOC0uNzJ6bS0yMC41MSA0LjdhNi43OSA2Ljc5IDAgMDEtLjI5IDIuMTIgNC4zIDQuMyAwIDAxLS44IDEuNTIgMy40MyAzLjQzIDAgMDEtMS4yMi45MyAzLjg3IDMuODcgMCAwMS0xLjUzLjMgMy41OCAzLjU4IDAgMDEtMi44My0xLjEyIDUuMzkgNS4zOSAwIDAxLTEtMy42NCA2LjgyIDYuODIgMCAwMS4yOS0yLjEzIDQuMjUgNC4yNSAwIDAxLjgtMS41MSAzLjIxIDMuMjEgMCAwMTEuMjMtLjg4IDQuMTggNC4xOCAwIDAxMS41Ny0uMjkgMy40MSAzLjQxIDAgMDEyLjg0IDEuMTkgNS41NSA1LjU1IDAgMDEuOTQgMy41em0tNS41NCAwYTguMTcgOC4xNyAwIDAwLjEzIDEuNjEgMy4zNyAzLjM3IDAgMDAuMzcgMSAxLjQ1IDEuNDUgMCAwMC41NC41OCAxLjQgMS40IDAgMDAuNy4xN0ExLjMgMS4zIDAgMDA5NyA1MGExLjUxIDEuNTEgMCAwMC41My0uNTggMy4zIDMuMyAwIDAwLjM3LTEgOCA4IDAgMDAuMTMtMS42IDUuMDcgNS4wNyAwIDAwLS40Ni0yLjU1IDEuNDMgMS40MyAwIDAwLTEuMjctLjc1IDEuMjggMS4yOCAwIDAwLS42NS4xOCAxLjU1IDEuNTUgMCAwMC0uNTMuNTcgMy4zNCAzLjM0IDAgMDAtLjM4IDEgNy4zNiA3LjM2IDAgMDAtLjE5IDEuNDZ6IiBmaWxsPSIjNWY1ZTVlIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBkPSJNNzMuNTIgNTAuNjZ2LjA4YS4xMS4xMSAwIDAxMCAuMDcgMi42OCAyLjY4IDAgMDEtLjE1LjM5LjUyLjUyIDAgMDEtLjI5LjIyaC0uMzdjLS4xOSAwLS40NiAwLS44Mi4wNWEyLjE0IDIuMTQgMCAwMS0uMzctLjQ0IDEuNzMgMS43MyAwIDAxLS4yNC0uNWwtLjMtMS4wOS0uMzgtMS4yNGMtLjEzLS40NS0uMjUtLjktLjM4LTEuMzdzLS4yNS0uOTEtLjM2LTEuMzVjLS4yMi0uOC0uNC0xLjQ1LS41My0xLjk0YTUuNjMgNS42MyAwIDAwLS4zLS45Mi45Mi45MiAwIDAxLjU4LS4zNSA0LjgyIDQuODIgMCAwMTEuMzItLjEzLjg5Ljg5IDAgMDEuMjQuMyAxLjc0IDEuNzQgMCAwMS4xMy4zNmMuMTYuNzQuMzUgMS41Mi41NSAyLjM0LjA3LjI1LjEyLjUxLjE3Ljc2cy4wOS41LjE0LjcxLjEuNTEuMTMuNjguMDcuMzMuMS40NSAwIC4yNC4wNy4zNC4wNS4yMS4wOC4zNGMuMDctLjI1LjE0LS41NS4yMi0uOTJzLjE4LS43Ny4yOC0xLjE4YzAtLjExLjA4LS4zMy4xNy0uNjVsLjI1LTFjLjA4LS4zNy4xNi0uNzEuMjMtMXMuMTMtLjU0LjE2LS42NWEuNzMuNzMgMCAwMDAtLjE2di0uMjVhLjkzLjkzIDAgMDEuMjItLjA4IDMuNjEgMy42MSAwIDAxLjQ1LS4xMmwuNTEtLjA3YTEgMSAwIDAxLjM5IDAgLjg5Ljg5IDAgMDEuMjIuMzEgMy4wNyAzLjA3IDAgMDEuMTQuNDdsLjM2IDEuNTJjLjEzLjU1LjI3IDEuMTIuNDEgMS43MiAwIC4yMi4xLjQzLjE0LjY0YTUuNjEgNS42MSAwIDAwLjEzLjU5bC4wOS4zN3YuMTdhLjI3LjI3IDAgMDEwIC4xMnYuMTljLjEzLS40Ni4yNS0xIC4zOC0xLjU3cy4yNS0xLjE5LjM5LTEuODNjLjExLS40Ny4yMi0uOTEuMzEtMS4zMXMuMTYtLjc3LjIzLTEuMTFhLjI0LjI0IDAgMDAwLS4xMy40OC40OCAwIDAxLjA5LS4xOS40My40MyAwIDAxLjIxLS4xMWguNTNsLjQuMDVoLjM2YS40OS40OSAwIDAxLjE5IDAgLjIuMiAwIDAxLjA5LjA5IDEgMSAwIDAwMCAuMS41NC41NCAwIDAxMCAuMjVjMCAuMDkgMCAuMi0uMDguMzRsLS4wOC4xOWMtLjEyLjM4LS4yNC44MS0uMzYgMS4yOEw3OS4zOSA0NmMtLjIxLjc5LS40NCAxLjYtLjY2IDIuNDJzLS40NCAxLjU3LS42NCAyLjIydi4xNWEyIDIgMCAwMS0uMTMuMzkuNTYuNTYgMCAwMS0uMjkuMjJoLS4zOWMtLjE5IDAtLjQ2IDAtLjguMDVhMi4xNSAyLjE1IDAgMDEtLjM4LS40NCAyLjExIDIuMTEgMCAwMS0uMjUtLjVjMC0uMTQtLjA4LS4zLS4xMy0uNDZzLS4wOS0uMzEtLjEyLS40NSAwLS4xOS0uMDctLjI3YTEuMjUgMS4yNSAwIDAwLS4wNy0uMjNjLS4xMS0uNDgtLjI0LTEtLjM2LTEuNTdzLS4yNS0xLjA5LS4zNS0xLjU3Yy0uMTEuNTEtLjI1IDEuMDYtLjQgMS42NnMtLjMgMS4xNS0uNDQgMS42OHptOS4xIDQuMzRhMS4zOSAxLjM5IDAgMDEtLjQyLjEzIDMuMjggMy4yOCAwIDAxLTEuNDMgMCA2IDYgMCAwMTAtLjczVjQ0LjMxYTQuNyA0LjcgMCAwMC0uMDYtLjc5IDQuODcgNC44NyAwIDAwLS4xNS0uNjMuNzQuNzQgMCAwMS4yOS0uMjZsLjUxLS4yNGguMjVhLjc0Ljc0IDAgMDEuNDQuMTMuOC44IDAgMDEuMjcuMjggNS42NCA1LjY0IDAgMDExLjE1LS41OHEuMjgtLjA5LjU3LS4xNWEyLjkgMi45IDAgMDEuNjItLjA2IDMuODcgMy44NyAwIDAxMS4zMy4yMyAyLjc4IDIuNzggMCAwMTEuMS43NCAzLjYzIDMuNjMgMCAwMS43NCAxLjMgNi4zIDYuMyAwIDAxLjE3IDEuODcgNy42NSA3LjY1IDAgMDEtLjQ4IDIuOTQgNC4yOCA0LjI4IDAgMDEtMS4yNCAxLjc0IDIuNzYgMi43NiAwIDAxLTEuMDYuNTkgNC4yNCA0LjI0IDAgMDEtMSAuMTQgMyAzIDAgMDEtMS41LS4zMnYzLjMyYTEuNjkgMS42OSAwIDAxMCAuMzh6bTEuMzItNC45YTEuNTEgMS41MSAwIDAwLjY1LS4xNiAxLjY2IDEuNjYgMCAwMC42My0uNTkgMy41NSAzLjU1IDAgMDAuNDgtMS4xNyA3LjY0IDcuNjQgMCAwMC4yLTEuODkgMy43MyAzLjczIDAgMDAtLjQ1LTIuMTEgMS40MSAxLjQxIDAgMDAtMS4yNC0uNjQgMS44IDEuOCAwIDAwLS44MS4yIDMuNzYgMy43NiAwIDAwLS42Ny40NnY1LjM5YTEuODIgMS44MiAwIDAwLjU0LjM2IDEuNTYgMS41NiAwIDAwLjY3LjE1eiIgZmlsbD0iI2I4NWExYiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PHBhdGggY2xhc3M9ImNscy00IiBkPSJNLTYuMjUgMGg2MHY2MGgtNjB6Ii8+PHBhdGggZD0iTTE2LjY2IDguMTRhMTUuNDMgMTUuNDMgMCAwMC03LjkxIDEwLjE3IDIzLjUxIDIzLjUxIDAgMTAzMCAwIDE1LjQxIDE1LjQxIDAgMDAtOS4zNy0xMC44MyAzLjQgMy40IDAgMDAtMi4wOC0yLjY5IDQuNjMgNC42MyAwIDAwLTguODYtMS42NSAyNC40MSAyNC40MSAwIDAwLTEuNzggNXoiIGZpbGw9IiMzOTUzNjAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjxwYXRoIGZpbGw9IiNmYmFhNmYiIGQ9Ik0xOCAyNmgxMnYxNEgxOHoiLz48cGF0aCBkPSJNMjUuODcgMzMuMThsLS4xMi0uMDhhMS40MiAxLjQyIDAgMTExLjY3LTIuMyAxLjg3IDEuODcgMCAwMC0xLjIyLjgxIDEuODUgMS44NSAwIDAwLS4zMyAxLjU3em0tNC40OCAwYTEuOCAxLjggMCAwMC0uMzktMS41NCAxLjkxIDEuOTEgMCAwMC0xLjIzLS44MSAxLjQyIDEuNDIgMCAwMTEuNjcgMi4zLjU3LjU3IDAgMDEtLjA1LjA1ek0yOC42MSAzMGguNTNsLTEuMDcgNC44Mi0yLjE0IDYuNDNoLTQuMjlsLTMuMjEtNS4zNiAxLjA3LTMuMjFjMS4wNyAxLjQzIDEuNzkgMi4zMiAyLjE0IDIuNjguNTQuNTMgMi42OC41MyAzLjc1LS41NEEyNi4xNyAyNi4xNyAwIDAwMjguNjEgMzB6IiBmaWxsPSIjZGM3ZjNjIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBkPSJNOS43NCAyOUgxNXYtOWgtNC4wNmExMyAxMyAwIDAxNy41LTEwcTEuMTQtNSAyLjcxLTYuNzVsLjE4LS4xNy4xMS0uMWEyLjI1IDIuMjUgMCAwMTEuMDgtLjQ3IDIuMzIgMi4zMiAwIDAxMi4xNSAzLjc3aC0uMDZhMS42NCAxLjY0IDAgMDEtLjMuMjlBMTUgMTUgMCAwMDIzIDguMTRhNSA1IDAgMDEzLTEuNSAxLjQgMS40IDAgMDEuNjYuMTYgMS4zMyAxLjMzIDAgMDEuNTEgMS43OSAxLjI5IDEuMjkgMCAwMS0uNi41NiAxMyAxMyAwIDAxMTAuMTQgMTFsLjEyLjg3SDMzdjhoNC44M2wxLjc5IDEzLjQzcS02LjMzIDMuOTMtMTUuODUgMy45M1Q4IDQyLjQ0em0xNS4xMyA5LjM5cTMuODctNi4zOSAzLjg3LTcuNjFjMC0yLjIzLTMuMjUtNC4wNi00Ljg3LTQuMDZTMTkgMjguNTQgMTkgMzAuNzhxMCAxLjIyIDMuODEgNy42MmExLjI0IDEuMjQgMCAwMDEuMDYuNTcgMS4wOCAxLjA4IDAgMDAxLS41NnoiIGZpbGw9IiNiZGNmYzgiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjxwYXRoIGNsYXNzPSJjbHMtNCIgZD0iTTE4Ljk2IDMxLjA3aDkuNjVMMjcgNDcuMTRoLTYuNDNsLTEuNjEtMTYuMDd6Ii8+PHBhdGggZD0iTTM5LjgxIDQ4LjgyYTIwIDIwIDAgMDEtMzIuMDkgMGwuODQtNi4xMWEyLjY4IDIuNjggMCAwMDEgLjE5IDIuODMgMi44MyAwIDAwMi44MS0yLjQzdjEuMjJhMi44NCAyLjg0IDAgMDA1LjY4IDB2MS42MmEyLjg1IDIuODUgMCAwMDUuNjkgMCAyLjg0IDIuODQgMCAwMDUuNjggMHYtMS41N2EyLjg0IDIuODQgMCAxMDUuNjggMHYtMS4yMkEyLjg0IDIuODQgMCAwMDM4IDQzYTIuODcgMi44NyAwIDAwMS0uMThsLjgxIDZ6IiBmaWxsPSIjODA5ZWIwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBkPSJNOC4zIDQ0LjY1bC4yNi0xLjg5YTIuNjggMi42OCAwIDAwMSAuMTkgMi44MyAyLjgzIDAgMDAyLjgxLTIuNDN2MS4yMmEyLjg0IDIuODQgMCAwMDUuNjggMHYxLjYyYTIuODUgMi44NSAwIDAwNS42OSAwIDIuODQgMi44NCAwIDAwNS42OCAwdi0xLjYyYTIuODQgMi44NCAwIDEwNS42OCAwdi0xLjIyQTIuODQgMi44NCAwIDAwMzggNDNhMi44NyAyLjg3IDAgMDAxLS4xOGwuMjUgMS44OWEyLjg1IDIuODUgMCAwMS00LjA3LTIuMTR2MS4yMmEyLjg0IDIuODQgMCAxMS01LjY4IDB2MS42MmEyLjg0IDIuODQgMCAwMS01LjY4IDAgMi44NSAyLjg1IDAgMDEtNS42OSAwdi0xLjY3YTIuODQgMi44NCAwIDAxLTUuNjggMHYtMS4yMkEyLjgzIDIuODMgMCAwMTkuNTggNDVhMi45IDIuOSAwIDAxLTEuMjgtLjN6IiBmaWxsPSIjNzM4ZTllIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48cGF0aCBjbGFzcz0iY2xzLTExIiBkPSJNMzcuNzggMjIuMzljLTEtMi44Ny0zLTQuNjktNC43Mi00LjUxLTIuMi4yMy0yLjc0IDMuNzYtMi4yOSA4czEuNyA3LjU2IDMuOSA3LjMzIDQtMy44OSAzLjY4LThjLS4wOCAxLjIzLS41MiAyLjI4LTEuMzkgMi4zNS0xLjEyLjEtMS40NC0xLjE5LTEuNTktMi44MnMtLjE0LTMgMS0zLjA4YTEuNTEgMS41MSAwIDAxMS40MS43M3oiLz48cGF0aCBjbGFzcz0iY2xzLTEyIiBkPSJNMzcgMjEuNzVjLS42My0xLjIxLTEuNS0xLjk1LTIuMzktMS44NS0xLjUxLjE1LTEuODcgMi41Ny0xLjU3IDUuNDdzMS4xNyA1LjE4IDIuNjcgNWMxLjExLS4xMiAxLjkzLTEuNSAyLjE2LTMuMzhhMS4xNiAxLjE2IDAgMDEtLjg5LjU3Yy0xLjEyLjEtMS40NC0xLjE5LTEuNTktMi44MnMtLjE0LTMgMS0zLjA4YTEuNjEgMS42MSAwIDAxLjYxLjA5eiIvPjxwYXRoIGNsYXNzPSJjbHMtMTEiIGQ9Ik05LjYgMjIuMzljMS0yLjg3IDMtNC42OSA0LjcyLTQuNTEgMi4yLjIzIDIuNzQgMy43NiAyLjI5IDhzLTEuNyA3LjU2LTMuOSA3LjMzLTQtMy44OS0zLjY4LThjLjA4IDEuMjMuNTEgMi4yOCAxLjM5IDIuMzUgMS4xMi4xIDEuNDQtMS4xOSAxLjU4LTIuODJzLjE1LTMtMS0zLjA4YTEuNTEgMS41MSAwIDAwLTEuNDMuNzF6Ii8+PHBhdGggY2xhc3M9ImNscy0xMiIgZD0iTTEwLjM3IDIxLjc1Yy42My0xLjIxIDEuNTEtMS45NSAyLjQtMS44NSAxLjUuMTUgMS44NyAyLjU3IDEuNTYgNS40N3MtMS4xNiA1LjE4LTIuNjcgNWMtMS4xMS0uMTItMS45My0xLjUtMi4xNi0zLjM4YTEuMTggMS4xOCAwIDAwLjkuNTdjMS4xMS4xIDEuNDQtMS4xOSAxLjU4LTIuODJzLjE0LTMtMS0zLjA4YTEuNjggMS42OCAwIDAwLS42NC4wN3oiLz48cGF0aCBkPSJNMTkgMjguNjNhNS4zNCA1LjM0IDAgMDEwLS42OWMwLTIuNDcgMS4yMS01LjI4IDQuODctNS4yOHM0Ljg3IDIuODEgNC44NyA1LjI4YTQuNCA0LjQgMCAwMS0uMTMgMWMtLjgtMS4zNS0yLjMtMi4xOC00LjgtMi4xOC0yLjM3LjAzLTMuOTEuNzItNC44MSAxLjg3eiIgZmlsbD0iI2Y0ZjhmZiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PHBhdGggY2xhc3M9ImNscy0xMSIgZD0iTTI2LjUyIDkuMTZMMjMuMzQgOWwzLjkzLTEuMTZhMS4zNSAxLjM1IDAgMDEtLjc1IDEuMzJ6TTIzIDguMTRsLTEuMzIgMWExNi43NyAxNi43NyAwIDAwMi0zLjcyQTYuNTYgNi41NiAwIDAwMjQgMi43NSAyLjM2IDIuMzYgMCAwMTI1LjIxIDVhMi40MyAyLjQzIDAgMDEtLjc1IDEuNTFBMTUgMTUgMCAwMDIzIDguMTR6Ii8+PHBhdGggZD0iTTEyOS41OCA1My43OXYtOS4zNWgxLjQ3di45M2EyLjcyIDIuNzIgMCAwMTIuMTgtMS4wOWMxLjc1IDAgMyAxLjMxIDMgMy41NHMtMS4yNCAzLjU2LTMgMy41NmEyLjY3IDIuNjcgMCAwMS0yLjE4LTEuMTF2My41MnptMy4yMS04LjIxYTIuMjIgMi4yMiAwIDAwLTEuNzQuOTF2Mi42OGEyLjI1IDIuMjUgMCAwMDEuNzQuOTEgMiAyIDAgMDAxLjkxLTIuMjYgMiAyIDAgMDAtMS45MS0yLjI0em00LjkxLTEuMTRoMS40N3YxYTIuODkgMi44OSAwIDAxMi4yLTEuMTV2MS40NmEyIDIgMCAwMC0uNDYgMCAyLjM2IDIuMzYgMCAwMC0xLjc0Ljg5djQuNjFoLTEuNDd6bTQuNDQgMy4zOGEzLjQ4IDMuNDggMCAxMTMuNDcgMy41NiAzLjM4IDMuMzggMCAwMS0zLjQ3LTMuNTZ6bTUuNDQgMGEyIDIgMCAxMC0yIDIuMjYgMiAyIDAgMDAyLTIuMjZ6bTcuNzYgMi40N2EyLjczIDIuNzMgMCAwMS0yLjE3IDEuMDljLTEuNzMgMC0zLTEuMzItMy0zLjU1czEuMjYtMy41NSAzLTMuNTVhMi43MSAyLjcxIDAgMDEyLjE3IDEuMXYtMy41MWgxLjQ4djkuMzRoLTEuNDh6bTAtMy44YTIuMjIgMi4yMiAwIDAwLTEuNzUtLjkxIDIgMiAwIDAwLTEuOSAyLjI1IDIgMiAwIDAwMS45IDIuMjUgMi4yMiAyLjIyIDAgMDAxLjc1LS45em03Ljk0IDMuODJhMy4yMyAzLjIzIDAgMDEtMi4zOSAxLjA3IDEuOTIgMS45MiAwIDAxLTIuMTctMi4xNHYtNC44aDEuNDd2NC4yNmMwIDEgLjUzIDEuMzggMS4zNiAxLjM4YTIuMjIgMi4yMiAwIDAwMS43My0uODl2LTQuNzVoMS40N3Y2Ljc3aC0xLjQ3em02LjQ2LTYuMDNhMy4wNSAzLjA1IDAgMDEyLjU5IDEuMmwtMSAuOWExLjc5IDEuNzkgMCAwMC0xLjU1LS44IDIuMjYgMi4yNiAwIDAwMCA0LjUgMS44NyAxLjg3IDAgMDAxLjU1LS44bDEgLjg5YTMgMyAwIDAxLTIuNTkgMS4yMSAzLjU1IDMuNTUgMCAwMTAtNy4xem00LjE3IDUuMzZ2LTMuOTFoLTEuMTJ2LTEuMjloMS4xMnYtMS44NWgxLjQ3djEuODVoMS4zN3YxLjI5aC0xLjM3djMuNTVjMCAuNDYuMjIuOC42NC44YTEgMSAwIDAwLjY2LS4yNGwuMzUgMS4xYTEuOTEgMS45MSAwIDAxLTEuMzkuNDQgMS41NiAxLjU2IDAgMDEtMS43My0xLjc0em0tMTExLjcxLjg0YTIuODcgMi44NyAwIDAxLTIuMTkuOSAyLjI1IDIuMjUgMCAwMS0yLjM1LTIuMjQgMi4xOCAyLjE4IDAgMDEyLjM0LTIuMiAyLjggMi44IDAgMDEyLjE5Ljg2di0xYzAtLjc5LS42NC0xLjI2LTEuNTgtMS4yNmEyLjc5IDIuNzkgMCAwMC0yIC44NWwtLjYtMWE0LjA1IDQuMDUgMCAwMTIuODUtMS4wOWMxLjQ5IDAgMi44MS42MyAyLjgxIDIuNDV2NC40OEg2Mi4yem0wLTEuODNhMiAyIDAgMDAtMS42MS0uNyAxLjIzIDEuMjMgMCAxMDAgMi40MiAyIDIgMCAwMDEuNjEtLjd6IiBmaWxsPSIjOTk5Ii8+PC9zdmc+" alt="WP Mail SMTP logo" class="wp-mail-smtp-logo-img">
+						</div>
+					</h1>
+				</header>
+				<div id="wp-mail-smtp-settings-error-loading-area-container">
+					<div id="wp-mail-smtp-settings-error-loading-area">
+						<div>
+							<div id="wp-mail-smtp-error-js">
+								<h3>Whoops, something&#039;s not working.</h3>
+								<p class="info">It looks like something is preventing JavaScript from loading on your website. WP Mail SMTP requires JavaScript in order to give you the best possible experience.</p>
+								<p class="info">
+									In order to fix this issue, please check each of the items below:								</p>
+								<ul class="info">
+									<li>If you are using an ad blocker, please disable it or whitelist the current page.</li>
+									<li>If you aren&#039;t already using Chrome, Firefox, Safari, or Edge, then please try switching to one of these popular browsers.</li>
+									<li>Confirm that your browser is updated to the latest version.</li>
+								</ul>
+								<p class="info">
+									If you&#039;ve checked each of these details and are still running into issues, then please get in touch with our support team. We’d be happy to help!								</p>
+								<div style="display: none;" id="wp-mail-smtp-nojs-error-message">
+									<div>
+										<strong style="font-weight: 500;" id="wp-mail-smtp-alert-message"></strong>
+									</div>
+									<p style="font-size: 14px;color: #777777;padding-bottom: 15px;">Copy the error message above and paste it in a message to the WP Mail SMTP support team.</p>
+								</div>
+								<a href="https://wordpress.org/support/plugin/wp-mail-smtp/" target="_blank" class="button" rel="noopener noreferrer">
+									Contact Us								</a>
+							</div>
+						</div>
+					</div>
+					<div class="wp-mail-smtp-error-footer">
+						<a href="http://localhost/wordpress/wp-admin/">Go back to the Dashboard</a>					</div>
+				</div>
+			</div>
+		</div>
+				<script type="text/javascript">
+			window.onerror = function myErrorHandler( errorMsg, url, lineNumber ) {
+				/* Don't try to put error in container that no longer exists post-vue loading */
+				var message_container = document.getElementById( 'wp-mail-smtp-nojs-error-message' );
+				if ( ! message_container ) {
+					return false;
+				}
+				var message = document.getElementById( 'wp-mail-smtp-alert-message' );
+				message.innerHTML = errorMsg;
+				message_container.style.display = 'block';
+				return false;
+			}
+		</script>
+				<script src="http://localhost/wordpress/wp-content/plugins/wp-mail-smtp/assets/vue/js/chunk-vendors.min.js?ver=4.7.1" id="wp-mail-smtp-vue-vendors-js"></script>
+<script id="wp-mail-smtp-vue-script-js-extra">
+var wp_mail_smtp_vue = {"ajax_url":"http://localhost/wordpress/wp-admin/admin-ajax.php","nonce":"581270bf67","is_multisite":"","translations":{"":{"domain":"wp-mail-smtp","lang":"en_US"}},"exit_url":"http://localhost/wordpress/wp-admin/admin.php?page=wp-mail-smtp","email_test_tab_url":"http://localhost/wordpress/wp-admin/admin.php?page=wp-mail-smtp-tools&tab=test","is_pro":"","is_ssl":"","license_exists":"","plugin_version":"4.7.1","other_smtp_plugins":[],"mailer_options":{"mail":{"slug":"mail","title":"Default (none)","description":"","edu_notice":"","min_php":"7.4","disabled":false},"sendlayer":{"slug":"sendlayer","title":"SendLayer","description":"\u003Cstrong\u003E\u003Ca href=\"https://sendlayer.com/wp-mail-smtp/?utm_source=wpmailsmtpplugin&#038;utm_medium=WordPress&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=Setup%20Wizard%20-%20Mailer%20Description\" target=\"_blank\" rel=\"noopener noreferrer\"\u003ESendLayer\u003C/a\u003E is our #1 recommended mailer.\u003C/strong\u003E Its affordable pricing and simple setup make it the perfect choice for WordPress sites. SendLayer will authenticate your outgoing emails to make sure they always hit customers\u2019 inboxes, and it has detailed documentation to help you authorize your domain.\u003Cbr\u003E\u003Cbr\u003EYou can send hundreds of emails for free when you sign up for a trial.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-sendlayer-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=SendLayer%20Documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003ESendLayer documentation\u003C/a\u003E.\u003C/p\u003E\u003Cp class=\"buttonned\"\u003E\u003Ca href=\"https://sendlayer.com/wp-mail-smtp/?utm_source=wpmailsmtpplugin&#038;utm_medium=WordPress&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=Plugin%20Settings%20-%20Mailer%20Button\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"wp-mail-smtp-btn wp-mail-smtp-btn-md wp-mail-smtp-btn-blueish\"\u003EGet Started with SendLayer\u003C/a\u003E\u003C/p\u003E","edu_notice":"","min_php":"7.4","disabled":false},"smtpcom":{"slug":"smtpcom","title":"SMTP.com","description":"\u003Cstrong\u003E\u003Ca href=\"https://wpmailsmtp.com/go/smtp/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003ESMTP.com\u003C/a\u003E is one of our recommended mailers.\u003C/strong\u003E It's a transactional email provider that's currently used by 100,000+ businesses. SMTP.com is an established brand that's been offering email services for more than 20 years.\u003Cbr\u003E\u003Cbr\u003ESMTP.com offers a free 30-day trial that allows you to send up to 50,000 emails.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-smtp-com-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=SMTP.com%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003ESMTP.com documentation\u003C/a\u003E.\u003C/p\u003E\u003Cp class=\"buttonned\"\u003E\u003Ca href=\"https://wpmailsmtp.com/go/smtp/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"wp-mail-smtp-btn wp-mail-smtp-btn-md wp-mail-smtp-btn-blueish\"\u003EGet Started with SMTP.com\u003C/a\u003E\u003C/p\u003E\u003Cp class=\"wp-mail-smtp-tooltip\"\u003ETransparency and Disclosure\u003Cspan class=\"wp-mail-smtp-tooltip-text\"\u003EWe believe in full transparency. The SMTP.com links above are tracking links as part of our partnership with SMTP (j2 Global). We can recommend just about any SMTP service, but we only recommend products that we believe will add value to our users.\u003C/span\u003E\u003C/p\u003E","edu_notice":"","min_php":"7.4","disabled":false},"sendinblue":{"slug":"sendinblue","title":"Brevo","description":"\u003Cstrong\u003E\u003Ca href=\"https://wpmailsmtp.com/go/sendinblue/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EBrevo\u003C/a\u003E (formerly Sendinblue) is one of our recommended mailers.\u003C/strong\u003E It's a transactional email provider with scalable price plans, so it's suitable for any size of business.\u003Cbr\u003E\u003Cbr\u003EIf you're just starting out, you can use Brevo's free plan to send up to 300 emails a day. You don't need to use a credit card to try it out. When you're ready, you can upgrade to a higher plan to increase your sending limits.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-sendinblue-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=Brevo%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EBrevo documentation\u003C/a\u003E.\u003C/p\u003E\u003Cp class=\"buttonned\"\u003E\u003Ca href=\"https://wpmailsmtp.com/go/sendinblue/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"wp-mail-smtp-btn wp-mail-smtp-btn-md wp-mail-smtp-btn-blueish\"\u003EGet Brevo Now (Free)\u003C/a\u003E\u003C/p\u003E\u003Cp class=\"wp-mail-smtp-tooltip\"\u003ETransparency and Disclosure\u003Cspan class=\"wp-mail-smtp-tooltip-text\"\u003EWe believe in full transparency. The Brevo (formerly Sendinblue) links above are tracking links as part of our partnership with Brevo. We can recommend just about any SMTP service, but we only recommend products that we believe will add value to our users.\u003C/span\u003E\u003C/p\u003E","edu_notice":"","min_php":"5.6","disabled":false},"amazonses":{"slug":"amazonses","title":"Amazon SES","description":"","edu_notice":"","min_php":"7.4","disabled":true},"elasticemail":{"slug":"elasticemail","title":"Elastic Email","description":"\u003Ca href=\"https://www.elasticemail.com/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EElastic Email\u003C/a\u003E is a cloud-based email marketing platform offering tools for email campaigns, automation, transactional emails, and analytics, designed for businesses of all sizes.\u003Cbr\u003E\u003Cbr\u003EIf you're just starting out, you can use Elastic Email's free plan to send emails to your account address from one of your verified email addresses. You don't need to use a credit card to try it out. When you're ready, you can upgrade to a higher plan.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-elastic-email-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=Elastic%20Email%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EElastic Email documentation\u003C/a\u003E.","edu_notice":"","min_php":"5.6","disabled":false},"gmail":{"slug":"gmail","title":"Google / Gmail","description":"Our Gmail mailer works with any Gmail or Google Workspace account via the Google API. You can send WordPress emails from your main email address or a Gmail alias, and it's more secure than connecting to Gmail using SMTP credentials. We now have a One-Click Setup, which simply asks you to authorize your Google account to use our app and takes care of everything for you. Alternatively, you can connect manually, which involves several steps that are more technical than other mailer options, so we created a detailed guide to walk you through the process.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-gmail-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=Gmail%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EGmail documentation\u003C/a\u003E.","edu_notice":"The Gmail mailer works well for sites that send low numbers of emails. However, Gmail's API has rate limitations and a number of additional restrictions that can lead to challenges during setup.\u003Cbr\u003E\u003Cbr\u003EIf you expect to send a high volume of emails, or if you find that your web host is not compatible with the Gmail API restrictions, then we recommend considering a different mailer option.","min_php":"5.6","disabled":false,"redirect_uri":"https://connect.wpmailsmtp.com/google/"},"mailgun":{"slug":"mailgun","title":"Mailgun","description":"\u003Ca href=\"https://www.mailgun.com\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EMailgun\u003C/a\u003E is a transactional email provider that offers a generous 3-month free trial. After that, it offers a 'Pay As You Grow' plan that allows you to pay for what you use without committing to a fixed monthly rate.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-mailgun-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=Mailgun%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EMailgun documentation\u003C/a\u003E.","edu_notice":"","min_php":"7.4","disabled":false},"mailjet":{"slug":"mailjet","title":"Mailjet","description":"\u003Ca href=\"https://www.mailjet.com/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EMailjet\u003C/a\u003E is a cloud-based email service platform that enables businesses to send marketing and transactional emails, offering features like email automation, real-time analytics, and responsive design templates. If you're just starting out, you can send up to 200 emails per day without a credit card.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-mailjet-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=Mailjet%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EMailjet documentation\u003C/a\u003E.","edu_notice":"","min_php":"5.6","disabled":false},"mailersend":{"slug":"mailersend","title":"MailerSend","description":"\u003Ca href=\"https://mailersend.com/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EMailerSend\u003C/a\u003E is a reliable transactional email provider with powerful features. They offer 12,000 emails per month for free and have affordable plans for higher volumes. Their modern API and excellent deliverability make them a great choice for WordPress sites.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-mailersend-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=MailerSend%20Documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EMailerSend documentation\u003C/a\u003E.","edu_notice":"","min_php":"7.4","disabled":false},"mandrill":{"slug":"mandrill","title":"Mandrill","description":"\u003Ca href=\"https://mandrillapp.com/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EMandrill\u003C/a\u003E is a transactional email API for MailChimp users. It is a reliable, scalable, and secure delivery API for transactional emails. Mandrill requires a paid monthly subscription to send emails.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-mandrill-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=Mandrill%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EMandrill documentation\u003C/a\u003E.","edu_notice":"","min_php":"7.4","disabled":false},"outlook":{"slug":"outlook","title":"365 / Outlook","description":"","edu_notice":"","min_php":"7.4","disabled":true},"postmark":{"slug":"postmark","title":"Postmark","description":"\u003Ca href=\"https://postmarkapp.com\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EPostmark\u003C/a\u003E is a transactional email provider that offers great deliverability and accessible pricing for any business. You can start out with the free trial that allows you to send 100 test emails each month via its secure API.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-postmark-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=Postmark%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EPostmark documentation\u003C/a\u003E.","edu_notice":"","min_php":"5.6","disabled":false},"resend":{"slug":"resend","title":"Resend","description":"\u003Ca href=\"https://resend.com/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EResend\u003C/a\u003E is a modern email delivery platform that enables developers to send transactional and marketing emails quickly and reliably. If you're just getting started, you can send up to 3000 emails per month without a credit card.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-resend-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=Resend%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EResend documentation\u003C/a\u003E.","edu_notice":"","min_php":"5.6","disabled":false},"sendgrid":{"slug":"sendgrid","title":"SendGrid","description":"\u003Ca href=\"https://sendgrid.com\" target=\"_blank\" rel=\"noopener noreferrer\"\u003ESendGrid\u003C/a\u003E is a popular transactional email provider that sends more than 35 billion emails every month. If you're just starting out, the free plan allows you to send up to 100 emails each day without entering your credit card details.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-sendgrid-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=SendGrid%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003ESendGrid documentation\u003C/a\u003E.","edu_notice":"","min_php":"7.4","disabled":false},"smtp2go":{"slug":"smtp2go","title":"SMTP2GO","description":"\u003Ca href=\"https://www.smtp2go.com/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003ESMTP2GO\u003C/a\u003E provides a robust and reliable email delivery service with global infrastructure, real-time analytics, and advanced security features. If you're just starting out, you can use SMTP2GO's free plan to send up to 1000 emails per month.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-smtp2go-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=SMTP2GO%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003ESMTP2GO documentation\u003C/a\u003E.","edu_notice":"","min_php":"5.6","disabled":false},"sparkpost":{"slug":"sparkpost","title":"SparkPost","description":"\u003Ca href=\"https://www.sparkpost.com/\" target=\"_blank\" rel=\"noopener noreferrer\"\u003ESparkPost\u003C/a\u003E is a transactional email provider that's trusted by big brands and small businesses. It sends more than 4 trillion emails each year and reports 99.9% uptime. You can get started with the free test account that lets you send up to 500 emails per month.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-sparkpost-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=SparkPost%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003ESparkPost documentation\u003C/a\u003E.","edu_notice":"","min_php":"5.6","disabled":false},"zoho":{"slug":"zoho","title":"Zoho Mail","description":"","edu_notice":"","min_php":"7.4","disabled":true},"smtp":{"slug":"smtp","title":"Other SMTP","description":"The Other SMTP option lets you send emails through an SMTP server instead of using a provider's API. This is easy and convenient, but it's less secure than the other mailers. Please note that your provider may not allow you to send a large number of emails. In that case, please use a different mailer.\u003Cbr\u003E\u003Cbr\u003ETo get started, read our \u003Ca href=\"https://wpmailsmtp.com/docs/how-to-set-up-the-other-smtp-mailer-in-wp-mail-smtp/?utm_source=WordPress&#038;utm_medium=plugin-settings&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=Other%20SMTP%20documentation\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EOther SMTP documentation\u003C/a\u003E.","edu_notice":"","min_php":"7.4","disabled":false}},"defined_constants":[],"upgrade_link":"https://wpmailsmtp.com/lite-upgrade/?utm_source=WordPress&utm_medium=plugin-settings&utm_campaign=liteplugin&utm_locale=en_us&utm_content=setup-wizard","versions":{"php_version":"8.2.12","php_version_below_55":false,"php_version_below_56":false,"wp_version":"6.9.4","wp_version_below_49":false},"public_url":"http://localhost/wordpress/wp-content/plugins/wp-mail-smtp/assets/vue/","current_user_email":"harshatwal149@gmail.com","completed_time":"0","education":{"upgrade_text":"We&#039;re sorry, the %mailer% mailer is not available on your plan. Please upgrade to the PRO plan to unlock all these awesome features.","upgrade_button":"Upgrade to Pro","upgrade_url":"https://wpmailsmtp.com/lite-upgrade/?utm_source=WordPress&utm_medium=plugin-settings&utm_campaign=liteplugin&utm_locale=en_us&discount=SMTPLITEUPGRADE","upgrade_bonus":"\u003Cstrong\u003EBonus:\u003C/strong\u003E WP Mail SMTP users get \u003Cspan class=\"highlight\"\u003E$50 off\u003C/span\u003E regular price,\u003Cbr\u003Eapplied at checkout.","upgrade_doc":"\u003Ca href=\"https://wpmailsmtp.com/docs/how-to-upgrade-wp-mail-smtp-to-pro-version/?utm_source=WordPress&#038;utm_medium=setup-wizard&#038;utm_campaign=liteplugin&#038;utm_locale=en_us&#038;utm_content=Wizard%20Pro%20Mailer%20Popup%20-%20Already%20purchased\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"already-purchased\"\u003EAlready purchased?\u003C/a\u003E"}};
+//# sourceURL=wp-mail-smtp-vue-script-js-extra
+</script>
+<script src="http://localhost/wordpress/wp-content/plugins/wp-mail-smtp/assets/vue/js/wizard.min.js?ver=4.7.1" id="wp-mail-smtp-vue-script-js"></script>
+		</body>
+		</html>
+		

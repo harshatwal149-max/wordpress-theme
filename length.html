@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>name</label>
+    <input type="text" id="name" placeholder="name">
+    <button type="text" onclick="checklength()">check</button><br><br>
+    <span id="length">convert into uppercase:</span>
+    <script>
+        function checklength(){
+            let name= document.getElementById("name").value.trim();
+            alert(name.length)
+            document.getElementById("length").innerHTML=name.toUpperCase();
+        }
+    </script>
+</body>
+</html>
