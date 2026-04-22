@@ -502,3 +502,9 @@ button {
         flex-direction: column;
     }
 }
+
+.woocommerce ul.products li.product {
+    width: 30%;
+    float: left;
+    margin: 1%;
+}

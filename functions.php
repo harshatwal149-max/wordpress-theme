@@ -19,9 +19,6 @@ function rajmahal_menu() {
 
 add_action('after_setup_theme', 'rajmahal_menu');
 
-
-
-
 function rajmahal_widgets_init() {
 
     // Contact Widget
@@ -65,4 +62,10 @@ function rajmahal_widgets_init() {
 
 }
 add_action('widgets_init', 'rajmahal_widgets_init');
+
+//woocommerce
+function mytheme_add_woocommerce_support() {
+    add_theme_support('woocommerce');
+}
+add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
 

@@ -9,7 +9,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-
     <nav class="navbar">
         <div class="logo">
             <?php
